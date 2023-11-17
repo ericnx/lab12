@@ -33,6 +33,7 @@ public class FamilyTree
         {
             // Add childNode to this node's children list. Also
             // set childNode's parent to this node.
+        	parent.children.add(childNode);
         }
         
         
@@ -199,6 +200,9 @@ public class FamilyTree
 			System.out.println("Tree:\n" + tree + "\n**************\n");
 			TreeNode ancestor = tree.getMostRecentCommonAncestor("Bilbo", "Frodo");
 			System.out.println("Most recent common ancestor of Bilbo and Frodo is " + ancestor.getName());
+			TreeNode eric = new TreeNode("Eric");
+			ancestor.addChild(eric);
+			System.out.println(tree);
 		}
 		catch (IOException x)
 		{
